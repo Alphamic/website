@@ -617,7 +617,7 @@ field of this one.
 你可以将若干 ClusterRole **聚合（Aggregate）** 起来，形成一个复合的 ClusterRole。
 作为集群控制面的一部分，控制器会监视带有 `aggregationRule` 的 ClusterRole 对象集合。`aggregationRule`
 为控制器定义一个标签{{< glossary_tooltip text="选择算符" term_id="selector" >}}供后者匹配应该组合到当前
-ClusterRole 的 `roles` 字段中的 ClusterRole 对象。
+ClusterRole 的 `rules` 字段中的 ClusterRole 对象。
 
 {{< caution >}}
 <!--
@@ -2071,7 +2071,7 @@ Examples:
 `--remove-extra-permissions`，可以删除额外的权限。
 
 已经存在的绑定也会被更新，使之包含输入对象中所给的主体。如果指定了
-`--remove-extra-permissions`，则可以删除多余的主体。
+`--remove-extra-subjects`，则可以删除多余的主体。
 
 例如:
 
